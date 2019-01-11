@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <ul class="tabs-list">
+      <li class="active">
+        <a class="tabs-list__link" href="">Доставка</a>
+      </li>
+      <li>
+        <a class="tabs-list__link" href="">Самовывоз</a>
+      </li>
+    </ul>
+    <div class="tabs-content">
+      <div class="tabs-content__item active" data-index="0">
+        <form action="echo.htmlacademy.ru" method="post">
+          <div class="fullname_phone">
+            <div class="half-width">
+            <label for="fullname">ФИО</label><br>
+            <input type="text" name="fullname" id="fullname" placeholder="Только кириллица">
+            </div>
+            <div class="half-width">
+            <label for="phone">Телефон</label><br>
+            <input class="half-width" type="tel" name="phone" id="phone" placeholder="+7(___)___-__-__">
+          </div>
+          </div>
+          <label for="adress">Адрес доставки</label><br>
+          <input type="text" name="adress" id="adress" placeholder="Город, улица, дом">
+          <label for="comment">Комментарий</label><br>
+          <textarea name="comment" id="comment" rows="5"></textarea>
+          <button class="form-btn" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="tabs-content__item" data-index="1">
+        <p>Здесь ебучая карта
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

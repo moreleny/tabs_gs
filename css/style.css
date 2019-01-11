@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font: normal 12 Helvetica, sans-serif;
+  background: linear-gradient(to right, tomato 0%, green 100%);
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 25px;
+}
+
+.tabs-list {
+  display: flex;
+}
+
+.tabs-list__link {
+  display: block;
+  position: relative;
+  top: 4px;
+  padding: 10px 25px;
+  border-radius: 2px 2px 0 0;
+  background: white;
+  opacity: 0.7;
+}
+
+.tabs-list li.active .tabs-list__link,
+.tabs-list__link:hover {
+  opacity: 1;
+  box-shadow: 0 0 1px 1px black;
+}
+
+.tabs-content {
+  position: relative;
+  z-index: 2;
+  padding: 25px;
+  border-radius: 0 4px 4px 4px;
+  background: white;
+}
+
+.tabs-content__item {
+  display: none;
+  min-height: 300px;
+  width: 100%;
+}
+
+.tabs-content__item.active {
+  display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+  .tabs-list {
+    flex-direction: column;
+  }
+
+  .tabs-list li {
+    width: 100%;
+  }
+
+  .tabs-content {
+    border-radius: 0;
+  }
+}
+
+/*-------Форма доставки--------*/
+.fullname_phone{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:10px;
+}
+
+.half-width{
+ width:50%;
+}
+
+.half-width:first-of-type{
+ margin-right:10px;
+}
+
+#fullname, #phone{
+  width: 100%;
+}
+
+#adress{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#comment{
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.form-btn{
+  float:right;
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  outline: none;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .fullname_phone {
+    display:block;
+  }
+
+  .half-width{
+    display: block;
+    width:100%;
+  }
+
+  }
