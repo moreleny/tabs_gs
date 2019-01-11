@@ -20,13 +20,13 @@
         <form action="echo.htmlacademy.ru" method="post">
           <div class="fullname_phone">
             <div class="half-width">
-            <label for="fullname">ФИО</label><br>
-            <input type="text" name="fullname" id="fullname" placeholder="Только кириллица">
+              <label for="fullname">ФИО</label><br>
+              <input type="text" name="fullname" id="fullname" placeholder="Только кириллица">
             </div>
             <div class="half-width">
-            <label for="phone">Телефон</label><br>
-            <input class="half-width" type="tel" name="phone" id="phone" placeholder="+7(___)___-__-__">
-          </div>
+              <label for="phone">Телефон</label><br>
+              <input class="half-width" type="tel" name="phone" id="phone" placeholder="+7(___)___-__-__">
+            </div>
           </div>
           <label for="adress">Адрес доставки</label><br>
           <input type="text" name="adress" id="adress" placeholder="Город, улица, дом">
@@ -36,8 +36,24 @@
         </form>
       </div>
       <div class="tabs-content__item" data-index="1">
-        <p>Здесь ебучая карта
-        </p>
+        <form action="echo.htmlacademy.ru" method="post">
+          <div class="radios">
+            <div class="radio-half">
+              <label for="radio">
+                <input type="radio" name="way" value="Песчаная улица, 13" >Пункт выдачи заказов Песчаная улица, дом 13
+              </label>
+            </div>
+            <div class="radio-half">
+              <label for="radio">
+                <input type="radio" name="way" value="Подсосенский переулок, 11" >Пункт выдачи заказов Подсосенский переулок, 11
+              </label>
+            </div>
+          </div>
+          <div class="map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Abfb7d58a85c6b8adeb5bb2431ccc256b395c3c7a7fe65defa6ee7b2eca966576&amp;source=constructor" width="600" height="400" frameborder="0"></iframe>
+          </div>
+          <button class="form-btn" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
   </div>

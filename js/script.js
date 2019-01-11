@@ -15,4 +15,6 @@ for (let el of tabLinks) {
     const panel = [...tabPanels].filter(el => el.getAttribute("data-index") == index);
     panel[0].classList.add("active");
     });
-  }
+  };
+  
+

@@ -54,7 +54,7 @@ body {
 
 .tabs-content__item {
   display: none;
-  min-height: 300px;
+  min-height: 500px;
   width: 100%;
 }
 
@@ -118,12 +118,44 @@ body {
 
 @media screen and (max-width: 768px) {
   .fullname_phone {
-    display:block;
+    flex-direction: column;
   }
 
   .half-width{
     display: block;
     width:100%;
+  }
+
+  }
+
+/*-------Форма самовывоза--------*/
+.radios{
+  display: flex;
+  width:100%;
+  margin-bottom: 10px;
+}
+
+.radio-half{
+width:50%;
+}
+
+.map{
+  margin-bottom: 15px;
+}
+
+.map iframe {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .radios {
+    flex-direction: column;
+  }
+
+  .radio-half{
+    display: block;
+    width:100%;
+    margin-bottom: 10px;
   }
 
   }
