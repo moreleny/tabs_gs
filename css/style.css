@@ -40,6 +40,7 @@ textarea {
 }
 
 body {
+  min-width: 320px;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   background-color: #f6f6f6;
