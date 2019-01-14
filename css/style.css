@@ -103,6 +103,7 @@ body {
 @media screen and (max-width: 768px) {
   .wrapper {
     max-width: 736px;
+    margin: 10px auto;
   }
 
   .main-title{
@@ -125,9 +126,20 @@ body {
 /*-------Форма доставки--------*/
 .main-form input,
 .main-form textarea {
+  box-sizing: border-box;
+  padding: 20px;
   font-family: inherit;
   font-size: 16px;
   line-height: 26px;
+}
+
+.main-form input {
+  
+  
+}
+
+.main-form input::placeholder {
+  color: #b8bed8;
 }
 
 .main-form label {
@@ -144,11 +156,11 @@ body {
 }
 
 .half-width{
- width:50%;
+ width: 50%;
 }
 
 .half-width:first-of-type{
- margin-right:10px;
+ margin-right:15px;
 }
 
 #fullname, #phone{
