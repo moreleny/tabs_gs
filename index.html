@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Document</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
   <div class="wrapper">
+    <h1 class="main-title">Выберите способ доставки</h1>
     <ul class="tabs-list">
       <li class="active">
         <a class="tabs-list__link" href="">Доставка</a>
@@ -18,21 +20,21 @@
     </ul>
     <div class="tabs-content">
       <div class="tabs-content__item active" data-index="0">
-        <form action="echo.htmlacademy.ru" method="post">
+        <form class="main-form" action="echo.htmlacademy.ru" method="post">
           <div class="fullname_phone">
             <div class="half-width">
               <label for="fullname">ФИО</label><br>
-              <input type="text" name="fullname" id="fullname" placeholder="Только кириллица">
+              <input type="text" name="fullname" id="fullname" placeholder="Только кириллица" required>
             </div>
             <div class="half-width">
               <label for="phone">Телефон</label><br>
-              <input class="half-width" type="tel" name="phone" id="phone" placeholder="+7(___)___-__-__">
+              <input class="half-width" type="tel" name="phone" id="phone" placeholder="+7(___)___-__-__" required>
             </div>
           </div>
           <label for="adress">Адрес доставки</label><br>
-          <input type="text" name="adress" id="adress" placeholder="Город, улица, дом">
+          <input type="text" name="adress" id="adress" placeholder="Город, улица, дом" required>
           <label for="comment">Комментарий</label><br>
-          <textarea name="comment" id="comment" rows="5"></textarea>
+          <textarea name="comment" id="comment" rows="5" required></textarea>
           <button class="form-btn" type="submit">Отправить</button>
         </form>
       </div>

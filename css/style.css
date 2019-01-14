@@ -1,10 +1,32 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/montserrat-v12-cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('../fonts/montserrat-v12-cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-v12-cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v12-cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-v12-cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-v12-cyrillic-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* montserrat-600 - cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/montserrat-v12-cyrillic-600.eot'); /* IE9 Compat Modes */
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+       url('../fonts/montserrat-v12-cyrillic-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-v12-cyrillic-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v12-cyrillic-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-v12-cyrillic-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-v12-cyrillic-600.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 
 ul {
+   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -13,15 +35,25 @@ a {
   color: black;
 }
 
-body {
-  font: normal 12 Helvetica, sans-serif;
-  background: linear-gradient(to right, tomato 0%, green 100%);
+textarea {
+  resize: none;
 }
 
+body {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f6f6f6;
+}
+
+
 .wrapper {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 25px;
+  max-width: 996px;
+  margin: 0px auto;
+}
+
+.main-title {
+  font-size: 32px;
+  line-height: 20px;
 }
 
 .tabs-list {
@@ -34,22 +66,27 @@ body {
   top: 4px;
   padding: 10px 25px;
   border-radius: 2px 2px 0 0;
-  background: white;
-  opacity: 0.7;
+  background-color: #edeeef;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8288a2;
+  
 }
 
 .tabs-list li.active .tabs-list__link,
 .tabs-list__link:hover {
-  opacity: 1;
-  box-shadow: 0 0 1px 1px black;
+  background-color: #ffffff;
+  color: #212bff;
 }
 
 .tabs-content {
+  min-height: 530px;
   position: relative;
   z-index: 2;
   padding: 25px;
   border-radius: 0 4px 4px 4px;
-  background: white;
+  background-color: #ffffff;
 }
 
 .tabs-content__item {
@@ -64,6 +101,14 @@ body {
 
 
 @media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 736px;
+  }
+
+  .main-title{
+    font-size: 24px;
+  }
+
   .tabs-list {
     flex-direction: column;
   }
@@ -78,6 +123,19 @@ body {
 }
 
 /*-------Форма доставки--------*/
+.main-form input,
+.main-form textarea {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.main-form label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
+}
+
 .fullname_phone{
   width: 100%;
   display: flex;
@@ -108,12 +166,16 @@ body {
 }
 
 .form-btn{
+  font-family: inherit;
+  outline: none;
   float:right;
   color: white;
-  background-color: blue;
-  padding: 10px;
-  outline: none;
-  border-radius: 20px;
+  background-color: #212bff;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 @media screen and (max-width: 768px) {
