@@ -4,11 +4,11 @@
   font-weight: 400;
   src: url('../fonts/montserrat-v12-cyrillic-regular.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Regular'), local('Montserrat-Regular'),
-       url('../fonts/montserrat-v12-cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/montserrat-v12-cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/montserrat-v12-cyrillic-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/montserrat-v12-cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/montserrat-v12-cyrillic-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+  url('../fonts/montserrat-v12-cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/montserrat-v12-cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/montserrat-v12-cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/montserrat-v12-cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/montserrat-v12-cyrillic-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 /* montserrat-600 - cyrillic */
 @font-face {
@@ -17,17 +17,17 @@
   font-weight: 600;
   src: url('../fonts/montserrat-v12-cyrillic-600.eot'); /* IE9 Compat Modes */
   src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
-       url('../fonts/montserrat-v12-cyrillic-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/montserrat-v12-cyrillic-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/montserrat-v12-cyrillic-600.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/montserrat-v12-cyrillic-600.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/montserrat-v12-cyrillic-600.svg#Montserrat') format('svg'); /* Legacy iOS */
+  url('../fonts/montserrat-v12-cyrillic-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/montserrat-v12-cyrillic-600.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/montserrat-v12-cyrillic-600.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/montserrat-v12-cyrillic-600.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/montserrat-v12-cyrillic-600.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 
 ul {
-   padding: 0;
-  margin: 0;
-  list-style: none;
+ padding: 0;
+ margin: 0;
+ list-style: none;
 }
 
 a {
@@ -55,6 +55,7 @@ body {
 .main-title {
   font-size: 32px;
   line-height: 20px;
+  margin-bottom: 45px;
 }
 
 .tabs-list {
@@ -63,16 +64,51 @@ body {
 
 .tabs-list__link {
   display: block;
+  box-sizing: border-box;
   position: relative;
-  top: 4px;
-  padding: 10px 25px;
-  border-radius: 2px 2px 0 0;
+  width: 126px;
+  padding: 22px 0 22px 32px;
   background-color: #edeeef;
+  border-radius: 5px 5px 0 0;
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
   color: #8288a2;
-  
+}
+
+.tabs-list__link--notfirst {
+  width: 144px;
+}
+
+
+.tabs-list__link::after {
+  z-index: 10;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  right: -32px;
+  border-bottom: 64px solid #edeeef; 
+  border-right: 32px solid transparent;
+}
+
+.tabs-list li.active .tabs-list__link::before{
+  z-index: 10;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  border-bottom: 64px solid #ffffff; 
+  border-right: 32px solid transparent;
+}
+
+.tabs-list__link:hover:after{
+  border-bottom-color: #ffffff;
 }
 
 .tabs-list li.active .tabs-list__link,
@@ -81,12 +117,16 @@ body {
   color: #212bff;
 }
 
+.tabs-list li.active .tabs-list__link::after{
+  border-bottom-color: #ffffff;
+}
+
 .tabs-content {
+  box-sizing: border-box;
   min-height: 530px;
   position: relative;
   z-index: 2;
-  padding: 25px;
-  border-radius: 0 4px 4px 4px;
+  padding: 25px 32px;
   background-color: #ffffff;
 }
 
@@ -105,7 +145,7 @@ body {
   .wrapper {
     max-width: 736px;
     margin: 0 16px;
-   }
+  }
 
   .main-title{
     font-size: 24px;
@@ -115,29 +155,39 @@ body {
     flex-direction: column;
   }
 
-  .tabs-list li {
+  .tabs-list__link {
+    box-sizing: border-box;
+    border-radius: 0;
     width: 100%;
+    padding-left: 16px;
+  }
+
+  .tabs-list__link::after{
+   border: none;
+   width: 10px;
+   height: 6px;
+   background: url("../img/arrow_up.svg") no-repeat;
+   top: 26px;
+   right: 16px;
   }
 
   .tabs-content {
-    border-radius: 0;
+    padding: 25px 16px;
   }
+
 }
 
 /*-------Форма доставки--------*/
 .main-form input,
 .main-form textarea {
   box-sizing: border-box;
-  padding: 20px;
+  padding: 14px 18px;
+  margin-top: 5px;
   font-family: inherit;
   font-size: 16px;
   line-height: 26px;
 }
 
-.main-form input {
-  
-  
-}
 
 .main-form input::placeholder {
   color: #b8bed8;
@@ -147,35 +197,33 @@ body {
   font-weight: 600;
   font-size: 14px;
   line-height: 26px;
+
 }
 
-.fullname_phone{
+.fullname_phone {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom:10px;
 }
 
-.half-width{
- width: 50%;
+.half-width {
+  width: 50%;
 }
 
-.half-width:first-of-type{
- margin-right:15px;
+.half-width:first-of-type {
+  margin-right: 15px;
 }
 
-#fullname, #phone{
+.fullname-window,
+.phone-window,
+.adress-window {
   width: 100%;
+  margin-bottom: 28px;
 }
 
-#adress{
+.comment-window {
   width: 100%;
-  margin-bottom: 10px;
-}
-
-#comment{
-  width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 38px;
 }
 
 .form-btn{
@@ -184,7 +232,7 @@ body {
   float:right;
   color: white;
   background-color: #212bff;
-  padding: 20px 50px;
+  padding: 16px 60px;
   border: none;
   border-radius: 50px;
   font-size: 16px;
@@ -201,20 +249,20 @@ body {
     width:100%;
   }
 
-  }
+}
 
 /*-------Форма самовывоза--------*/
-.radios{
+.radios {
   display: flex;
   width:100%;
   margin-bottom: 10px;
 }
 
-.radio-half{
-width:50%;
+.radio-half {
+  width:50%;
 }
 
-.map{
+.map {
   margin-bottom: 15px;
 }
 
@@ -227,10 +275,18 @@ width:50%;
     flex-direction: column;
   }
 
-  .radio-half{
+  .radio-half {
     display: block;
     width:100%;
     margin-bottom: 10px;
   }
 
-  }
+}
+/* радиобаттоны
+
+width: 22px;
+   height: 22px;
+   background: url("../img/radio_on.svg") no-repeat 50% 50%,
+               url("../img/radio_hov.svg") no-repeat;
+
+               */

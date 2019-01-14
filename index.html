@@ -12,10 +12,10 @@
     <h1 class="main-title">Выберите способ доставки</h1>
     <ul class="tabs-list">
       <li class="active">
-        <a class="tabs-list__link" href="">Доставка</a>
+        <a class="tabs-list__link tabs-list__link--first" href="">Доставка</a>
       </li>
       <li>
-        <a class="tabs-list__link" href="">Самовывоз</a>
+        <a class="tabs-list__link tabs-list__link--notfirst" href="">Самовывоз</a>
       </li>
     </ul>
     <div class="tabs-content">
@@ -24,17 +24,17 @@
           <div class="fullname_phone">
             <div class="half-width">
               <label for="fullname">ФИО</label><br>
-              <input type="text" name="fullname" id="fullname" placeholder="Только кириллица" required>
+              <input class="fullname-window" type="text" name="fullname" id="fullname" placeholder="Только кириллица" required>
             </div>
             <div class="half-width">
               <label for="phone">Телефон</label><br>
-              <input class="half-width" type="tel" name="phone" id="phone" placeholder="+7(___)___-__-__" required>
+              <input class="phone-window" type="tel" name="phone" id="phone" placeholder="+7(___)___-__-__" required>
             </div>
           </div>
           <label for="adress">Адрес доставки</label><br>
-          <input type="text" name="adress" id="adress" placeholder="Город, улица, дом" required>
+          <input class="adress-window" type="text" name="adress" id="adress" placeholder="Город, улица, дом" required>
           <label for="comment">Комментарий</label><br>
-          <textarea name="comment" id="comment"  required></textarea>
+          <textarea class="comment-window" name="comment" id="comment" rows="3" required></textarea>
           <button class="form-btn" type="submit">Отправить</button>
         </form>
       </div>
