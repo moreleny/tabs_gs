@@ -167,21 +167,32 @@ body {
     border-radius: 0;
     width: 100%;
     padding-left: 16px;
+    background-color: #ffffff;
+    color: #8288a2;
   }
 
-  .tabs-list__link::after{
-   border: none;
-   width: 10px;
-   height: 6px;
-   background: url("../img/arrow_up.svg") no-repeat;
-   top: 26px;
-   right: 16px;
+  .tabs-list__link:hover {
+    color:#212bff;
   }
 
-  .tabs-content {
-    padding: 25px 16px;
+  .tabs-list__link::after {
+    border: none;
+    width: 10px;
+    height: 6px;
+    background: url("../img/arrow_down.svg") no-repeat;
+    top: 26px;
+    right: 16px;
+  }
+  
+  .tabs-list__link:hover:after {
+    background: url("../img/arrow_down--hov.svg") no-repeat;
   }
 
+  .tabs-list li.active .tabs-list__link::after{
+    background: url("../img/arrow_up.svg") no-repeat;
+  }
+
+  
 }
 
 /*-------Форма доставки--------*/
@@ -247,6 +258,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .tabs-content {
+    padding: 25px 16px;
+  }
+
   .fullname_phone {
     flex-direction: column;
   }
@@ -261,7 +276,7 @@ body {
 /*-------Форма самовывоза--------*/
 .radios {
   display: flex;
-  width:100%;
+  width: 100%;
   margin-bottom: 10px;
 }
 
@@ -281,6 +296,7 @@ body {
   color: #212bff;
 }
 
+
 .radiobtn + .radiobtn_lbl::before {
   content:"";
   position: absolute;
@@ -299,6 +315,15 @@ body {
                url("../img/radio_hov.svg") no-repeat;
 }
 
+.radiobtn:disabled + .radiobtn_lbl::before {
+  background-image: url(../img/radio_dis.svg);   
+  }
+
+.radiobtn:disabled +  .radiobtn_lbl,
+.radiobtn:disabled +  .radiobtn_lbl:hover {
+  color: #b8bed8;
+}
+
 .map {
   margin-bottom: 15px;
 }
@@ -312,6 +337,7 @@ body {
 @media screen and (max-width: 768px) {
   .radios {
     flex-direction: column;
+    padding-left: 22px;
   }
 
   .radio-half {
@@ -320,12 +346,8 @@ body {
     margin-bottom: 10px;
   }
 
+  .radiobtn + .radiobtn_lbl::before {
+
+  }
+
 }
-/* радиобаттоны
-
-width: 22px;
-   height: 22px;
-   background: url("../img/radio_on.svg") no-repeat 50% 50%,
-               url("../img/radio_hov.svg") no-repeat;
-
-               */
