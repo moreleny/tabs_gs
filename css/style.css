@@ -46,6 +46,13 @@ body {
   background-color: #f6f6f6;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 
 .wrapper {
   max-width: 996px;
@@ -262,7 +269,7 @@ body {
   width:50%;
 }
 
-.radio-half label {
+.radiobtn_lbl {
   position: relative;
   margin-left: 15px;
   font-size: 14px;
@@ -270,7 +277,11 @@ body {
   line-height: 26px;
 }
 
-.radio-half label::before {
+.radiobtn_lbl:hover {
+  color: #212bff;
+}
+
+.radiobtn + .radiobtn_lbl::before {
   content:"";
   position: absolute;
   width: 22px;
@@ -279,10 +290,14 @@ body {
   left: -37px;
 }
 
-input[type="radio"] {
-  display: none;
+.radiobtn + .radiobtn_lbl:hover::before {
+  background-image: url("../img/radio_hov.svg");
 }
 
+.radiobtn:checked + .radiobtn_lbl::before {
+  background: url("../img/radio_on.svg") no-repeat 50% 50%,
+               url("../img/radio_hov.svg") no-repeat;
+}
 
 .map {
   margin-bottom: 15px;
