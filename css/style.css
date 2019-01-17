@@ -99,9 +99,10 @@ body {
   right: -32px;
   border-bottom: 64px solid #edeeef; 
   border-right: 32px solid transparent;
+  border-image: linear-gradient(to top right, #edeeef 50%, #dadbdc 51%, transparent 55%);
 }
 
-.tabs-list li.active .tabs-list__link::before{
+.tabs-list li.active .tabs-list__link::before {
   z-index: 10;
   content: '';
   display: block;
@@ -111,11 +112,11 @@ body {
   top: 0;
   left: 0;
   border-bottom: 64px solid #ffffff; 
-  border-right: 32px solid transparent;
+  border-right: 32px solid #ffffff;
 }
 
 .tabs-list__link:hover:after{
-  border-bottom-color: #ffffff;
+  border-image: linear-gradient(to top right, #ffffff 50%, #dadbdc 51%, transparent 55%);
 }
 
 .tabs-list li.active .tabs-list__link,
@@ -125,7 +126,7 @@ body {
 }
 
 .tabs-list li.active .tabs-list__link::after{
-  border-bottom-color: #ffffff;
+  border-image: linear-gradient(to top right, #ffffff 50%, #dadbdc 51%, transparent 55%);
 }
 
 .tabs-content {
@@ -188,10 +189,13 @@ body {
     background: url("../img/arrow_down--hov.svg") no-repeat;
   }
 
-  .tabs-list li.active .tabs-list__link::after{
+  .tabs-list li.active .tabs-list__link::after {
     background: url("../img/arrow_up.svg") no-repeat;
   }
-
+    
+  .tabs-list li.active .tabs-list__link::before {
+    display: none;
+   } 
   
 }
 
@@ -204,8 +208,51 @@ body {
   font-family: inherit;
   font-size: 16px;
   line-height: 26px;
+  border: 1px solid #dadef0;
+  border-radius: 5px;
 }
 
+
+.main-form input:hover,
+.main-form textarea:hover {
+  border-color: #c3c9db;
+  cursor: pointer;
+}
+
+.main-form input:focus,
+.main-form textarea:focus {
+  outline: none;
+  border-color: #8288a2;
+}
+
+.main-form input:disabled,
+.main-form textarea:disabled,
+.main-form input:hover:disabled,
+.main-form textarea:hover:disabled {
+  border-color: #edeeef;
+  background-color: #edeeef;
+  cursor: default; 
+}
+
+.main-form .error,
+.main-form .error:hover {
+  position: relative;
+  border-color: #ff1e38;
+}
+
+.main-form span {
+  position: relative;
+}
+
+.main-form .error + span:after {
+  position: absolute;
+  content: "Ошибка! Введите верное значение";
+  font-size: 12px;
+  line-height: 20px;
+  color: #ff1e38;
+  bottom: 20px;
+  min-width: 500px;
+}
 
 .main-form input::placeholder {
   color: #b8bed8;
@@ -244,7 +291,7 @@ body {
   margin-bottom: 38px;
 }
 
-.form-btn{
+.form-btn {
   font-family: inherit;
   outline: none;
   float:right;
@@ -255,6 +302,19 @@ body {
   border-radius: 50px;
   font-size: 16px;
   line-height: 24px;
+}
+
+.form-btn:hover {
+  background-color: #2029ea;
+}
+
+.form-btn:active {
+  background-color: #1e26d8;
+}
+
+.form-btn:disabled {
+  background-color: #edeeef;
+  color: #b8bed8;
 }
 
 @media screen and (max-width: 768px) {
