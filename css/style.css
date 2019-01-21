@@ -200,8 +200,9 @@ body {
 }
 
 /*-------Форма доставки--------*/
-.main-form input,
-.main-form textarea {
+.delivery-form input,
+.delivery-form textarea {
+  position: relative;
   box-sizing: border-box;
   padding: 14px 18px;
   margin-top: 5px;
@@ -213,52 +214,59 @@ body {
 }
 
 
-.main-form input:hover,
-.main-form textarea:hover {
+.delivery-form input:hover,
+.delivery-form textarea:hover {
   border-color: #c3c9db;
   cursor: pointer;
 }
 
-.main-form input:focus,
-.main-form textarea:focus {
+.delivery-form input:focus,
+.delivery-form textarea:focus {
   outline: none;
   border-color: #8288a2;
 }
 
-.main-form input:disabled,
-.main-form textarea:disabled,
-.main-form input:hover:disabled,
-.main-form textarea:hover:disabled {
+.delivery-form input:disabled,
+.delivery-form textarea:disabled,
+.delivery-form input:hover:disabled,
+.delivery-form textarea:hover:disabled {
   border-color: #edeeef;
   background-color: #edeeef;
   cursor: default; 
 }
 
-.main-form .error,
-.main-form .error:hover {
-  position: relative;
+.fullname-window,
+.phone-window,
+.adress-window {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.comment-window {
+  width: 100%;
+  margin-bottom: 38px;
+}
+
+
+.delivery-form .error,
+.delivery-form .error:hover,
+.delivery-form .error:focus {
   border-color: #ff1e38;
 }
 
-.main-form span {
-  position: relative;
-}
-
-.main-form .error + span:after {
-  position: absolute;
-  content: "Ошибка! Введите верное значение";
+.delivery-form label.error,
+.delivery-form label.error:hover {
   font-size: 12px;
-  line-height: 20px;
+  font-weight: normal;
   color: #ff1e38;
-  bottom: 20px;
-  min-width: 500px;
 }
 
-.main-form input::placeholder {
+
+.delivery-form input::placeholder {
   color: #b8bed8;
 }
 
-.main-form label {
+.delivery-form label {
   font-weight: 600;
   font-size: 14px;
   line-height: 26px;
@@ -277,18 +285,6 @@ body {
 
 .half-width:first-of-type {
   margin-right: 15px;
-}
-
-.fullname-window,
-.phone-window,
-.adress-window {
-  width: 100%;
-  margin-bottom: 28px;
-}
-
-.comment-window {
-  width: 100%;
-  margin-bottom: 38px;
 }
 
 .form-btn {
@@ -338,6 +334,7 @@ body {
   display: flex;
   width: 100%;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .radio-half {
@@ -357,7 +354,7 @@ body {
 }
 
 
-.radiobtn + .radiobtn_lbl::before {
+.radiobtn ~ .radiobtn_lbl:before {
   content:"";
   position: absolute;
   width: 22px;
@@ -366,22 +363,32 @@ body {
   left: -37px;
 }
 
-.radiobtn + .radiobtn_lbl:hover::before {
+.radiobtn ~ .radiobtn_lbl:hover:before {
   background-image: url("../img/radio_hov.svg");
 }
 
-.radiobtn:checked + .radiobtn_lbl::before {
+.radiobtn:checked ~ .radiobtn_lbl:before {
   background: url("../img/radio_on.svg") no-repeat 50% 50%,
                url("../img/radio_hov.svg") no-repeat;
 }
 
-.radiobtn:disabled + .radiobtn_lbl::before {
+.radiobtn:disabled ~ .radiobtn_lbl:before {
   background-image: url(../img/radio_dis.svg);   
   }
 
-.radiobtn:disabled +  .radiobtn_lbl,
-.radiobtn:disabled +  .radiobtn_lbl:hover {
+.radiobtn:disabled ~  .radiobtn_lbl,
+.radiobtn:disabled ~  .radiobtn_lbl:hover {
   color: #b8bed8;
+}
+
+.pickup-form label.error,
+.pickup-form label.error:hover  {
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #ff1e38;
 }
 
 .map {
@@ -404,6 +411,12 @@ body {
     display: block;
     width:100%;
     margin-bottom: 10px;
+  }
+  
+  .pickup-form label.error,
+  .pickup-form label.error:hover  {
+    left: 0;
+    bottom:-5px;
   }
 
   .radiobtn + .radiobtn_lbl::before {

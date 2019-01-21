@@ -20,21 +20,21 @@
     </ul>
     <div class="tabs-content">
       <div class="tabs-content__item active" data-index="0">
-        <form class="main-form" action="echo.htmlacademy.ru" method="post">
+        <form class="delivery-form" action="echo.htmlacademy.ru" method="post">
           <div class="fullname_phone">
             <div class="half-width">
               <label for="fullname">ФИО</label><br>
-              <input class="fullname-window" type="text" name="fullname" id="fullname" placeholder="Только кириллица" required>
+              <input class="fullname-window" type="text" name="fullname" id="fullname" placeholder="Только кириллица">
               <span></span>
             </div>
             <div class="half-width">
               <label for="phone">Телефон</label><br>
-              <input class="phone-window" type="tel" name="phone" id="phone" placeholder="+7(___)___-__-__" required>
+              <input class="phone-window" type="tel" name="phone" id="phone" placeholder="+7(___)___-__-__">
               <span></span>
             </div>
           </div>
           <label for="adress">Адрес доставки</label><br>
-          <input class="adress-window" type="text" name="adress" id="adress" placeholder="Город, улица, дом" required>
+          <input class="adress-window" type="text" name="adress" id="adress" placeholder="Город, улица, дом">
           <span></span>
           <label for="comment">Комментарий</label><br>
           <textarea class="comment-window" name="comment" id="comment" rows="3" required></textarea>
@@ -43,7 +43,7 @@
         </form>
       </div>
       <div class="tabs-content__item" data-index="1">
-        <form action="echo.htmlacademy.ru" method="post">
+        <form class="pickup-form" action="echo.htmlacademy.ru" method="post">
           <div class="radios">
             <div class="radio-half">
               <input class="visually-hidden radiobtn" type="radio" name="way" id="ans_1" value="Песчаная улица, 13">
@@ -65,7 +65,7 @@
   <script src="js/script.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
   <script src="js/jquery.custom.js"></script>
 </body>
 </html>
