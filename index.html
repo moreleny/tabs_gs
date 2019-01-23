@@ -6,6 +6,8 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<4f168a78-8146-4507-9d44-d94d82d16cc9>&lang=ru_RU" type="text/javascript">
+  </script>
 </head>
 <body>
   <div class="wrapper">
@@ -54,9 +56,7 @@
               <label class="radiobtn_lbl" for="ans_2">Пункт выдачи заказов Подсосенский переулок, 11</label>
             </div>
           </div>
-          <div class="map">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Abfb7d58a85c6b8adeb5bb2431ccc256b395c3c7a7fe65defa6ee7b2eca966576&amp;source=constructor" width="600" height="400" frameborder="0"></iframe>
-          </div>
+          <section class="map" id="map"></section>
           <button class="form-btn" type="submit">Отправить</button>
         </form>
       </div>
@@ -67,5 +67,6 @@
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/jquery.validate.js"></script>
   <script src="js/jquery.custom.js"></script>
+  <script src="js/yamap.js"></script>
 </body>
 </html>

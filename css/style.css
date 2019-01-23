@@ -373,7 +373,7 @@ body {
 }
 
 .radiobtn:disabled ~ .radiobtn_lbl:before {
-  background-image: url(../img/radio_dis.svg);   
+  background-image: url("../img/radio_dis.svg");   
   }
 
 .radiobtn:disabled ~  .radiobtn_lbl,
@@ -392,14 +392,10 @@ body {
 }
 
 .map {
-  margin-bottom: 15px;
-}
-
-.map iframe {
+  height: 550px;
+  width: 930px;
   margin: 0 auto;
 }
-
-
 
 @media screen and (max-width: 768px) {
   .radios {
@@ -419,6 +415,9 @@ body {
     bottom:-5px;
   }
 
-  
+  .map {
+    height: 300px;
+    width: 700px;
+  }
 
 }
