@@ -392,8 +392,8 @@ body {
 }
 
 .map {
-  height: 550px;
-  width: 930px;
+  height: 548px;
+  width: 932px;
   margin: 0 auto;
 }
 
@@ -415,9 +415,5 @@ body {
     bottom:-5px;
   }
 
-  .map {
-    height: 300px;
-    width: 700px;
-  }
-
+  
 }
