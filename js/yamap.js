@@ -12,12 +12,8 @@ function init () {
         center: [55.76, 37.64], // Москва
         zoom: 10
     }, {
+        //autoFitToViewport: 'always',
         searchControlProvider: 'yandex#search'
     });
 }
 
-function fitMapToViewport () {
-    myMap.container.fitToViewport();
-
-
-}
