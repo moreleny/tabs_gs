@@ -414,6 +414,8 @@ body {
     left: 0;
     bottom:-5px;
   }
-
+  .map {
+    max-width:100%;    
+  }
   
 }

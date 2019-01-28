@@ -3,6 +3,7 @@ ymaps.ready(function () {
         center: [55.776062, 37.610997],
         zoom: 10
     }, {
+            autoFitToViewport: 'always',
             searchControlProvider: 'yandex#search'
         }),
 
