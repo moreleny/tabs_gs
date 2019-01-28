@@ -42,5 +42,5 @@ ymaps.ready(function () {
         .add(myFirstPlacemark)
         .add(mySecondPlacemark);
 
-    //myMap.behaviors.disable('drag');
+    myMap.behaviors.disable('drag');
 });
