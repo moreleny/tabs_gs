@@ -41,4 +41,6 @@ ymaps.ready(function () {
     myMap.geoObjects
         .add(myFirstPlacemark)
         .add(mySecondPlacemark);
+
+    myMap.behaviors.disable('drag');
 });
