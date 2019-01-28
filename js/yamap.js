@@ -5,7 +5,9 @@ ymaps.ready(function () {
     }, {
             autoFitToViewport: 'always',
             searchControlProvider: 'yandex#search'
-        }),
+        });
+
+        myMap.behaviors.disable('drag');
 
         // Создаём макет содержимого.
         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
@@ -42,5 +44,4 @@ ymaps.ready(function () {
         .add(myFirstPlacemark)
         .add(mySecondPlacemark);
 
-    myMap.behaviors.disable('drag');
 });
